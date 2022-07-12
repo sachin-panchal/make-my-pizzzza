@@ -1,0 +1,21 @@
+<ng-container *ngIf="order.price">
+    <div class="row">
+        <div class="col-md-6">
+            <ng-container *ngFor="let pizza of order.pizzas">
+                <checkout-item [checkoutItem]="pizza"></checkout-item>
+                <br>
+            </ng-container>
+            <ng-container *ngFor="let nonPizza of order.nonPizzas">
+                <checkout-item [checkoutItem]="nonPizza"></checkout-item>
+                <br>
+            </ng-container>
+            <ng-container *ngFor="let drink of order.drinks">
+                <checkout-item [checkoutItem]="drink"></checkout-item>
+                <br>
+            </ng-container>
+        </div>
+        <div class="col-md-6">
+            <delivery-details></delivery-details>
+        </div>
+    </div>
+</ng-container>

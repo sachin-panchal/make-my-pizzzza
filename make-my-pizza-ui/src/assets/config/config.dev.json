@@ -1,0 +1,9 @@
+{
+    "webApiUrl": "http://localhost:5263/",
+    "environment": {
+        "name" : "dev"
+    },
+    "logging": {
+        "console": true
+    }
+}

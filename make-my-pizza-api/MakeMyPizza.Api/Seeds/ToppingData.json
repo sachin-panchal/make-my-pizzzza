@@ -1,0 +1,47 @@
+[
+    {
+        "Id": 1,
+        "Name": "Grilled Mushrooms",
+        "Price": 80
+    },
+    {
+        "Id": 2,
+        "Name": "Onion",
+        "Price": 60
+    },
+    {
+        "Id": 3,
+        "Name": "Crisp Capsicum",
+        "Price": 60
+    },
+    {
+        "Id": 4,
+        "Name": "Fresh Tomato",
+        "Price": 60
+    },
+    {
+        "Id": 5,
+        "Name": "Paneer Cubes",
+        "Price": 89
+    },
+    {
+        "Id": 6,
+        "Name": "Red Pepper",
+        "Price": 60
+    },
+    {
+        "Id": 7,
+        "Name": "Jalapeno",
+        "Price": 60
+    },
+    {
+        "Id": 8,
+        "Name": "Golder Corn",
+        "Price": 60
+    },
+    {
+        "Id": 9,
+        "Name": "Black Olive",
+        "Price": 79
+    }
+]

@@ -1,0 +1,39 @@
+[
+    {
+        "Id": 1,
+        "Name": "Classic Garlic Breadsticks + Cheesy Dip",
+        "ImageUrl": "../assets/Classic Garlic Breadsticks and Cheesy Dip.jpeg",
+        "Price": 139
+    },
+    {
+        "Id": 2,
+        "Name": "Choco Lava Garlic Breadsticks",
+        "ImageUrl": "../assets/Choco Lava Garlic Breadsticks $119.jpeg",
+        "Price": 119
+    },
+    {
+        "Id": 3,
+        "Name": "Choco Lava Cake",
+        "ImageUrl": "../assets/Choco Lava Cake.jpeg",
+        "Price": 99
+    },
+    {
+        "Id": 4,
+        "Name": "Butterscotch Mousse Cake",
+        "ImageUrl": "../assets/Butterscotch Mousse Cake.jpeg",
+        "Price": 99
+    },
+    {
+        "Id": 5,
+        "Name": "Belgian Chocolate Mousse Cake",
+        "ImageUrl": "../assets/Belgian Chocolate Mousse Cake.jpeg",
+        "Price": 99
+    },
+    {
+        "Id": 6,
+        "Name": "Cheese",
+        "ImageUrl": "../assets/cheese.png",
+        "Price": 75
+    }
+
+]

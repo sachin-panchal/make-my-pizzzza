@@ -1,0 +1,20 @@
+<mat-card class="mat-panel">
+    <!-- <img mat-card-image [src]="checkoutItem.imageUrl" [alt]="checkoutItem.name">
+    <mat-card-header>
+        <mat-card-title >{{checkoutItem.name}}</mat-card-title>
+        <mat-card-subtitle><strong>{{checkoutItem.price | currency: 'INR'}}</strong></mat-card-subtitle>
+    </mat-card-header> -->
+    <mat-card-title-group>
+        <mat-card-title >{{checkoutItem.name}}</mat-card-title>
+        <mat-card-subtitle>{{checkoutItem.price | currency: 'INR'}}</mat-card-subtitle>
+        <img mat-card-md-image [src]="checkoutItem.imageUrl" [alt]="checkoutItem.name">
+    </mat-card-title-group>
+    <mat-card-content>
+        <p>
+            {{checkoutItem.description}}
+        </p>
+    </mat-card-content>
+    <!-- <mat-card-actions align="end">
+        <button mat-raised-button (click)="remove(checkoutItem.id)">Add to Cart</button>
+    </mat-card-actions> -->
+</mat-card>

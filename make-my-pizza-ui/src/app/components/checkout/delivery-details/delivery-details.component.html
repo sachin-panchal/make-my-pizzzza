@@ -1,0 +1,102 @@
+<!-- <mat-card class="mat-panel">
+    <mat-card-title-group>
+        <mat-card-title >Delivery Address</mat-card-title>
+        <mat-card-subtitle>{{checkoutItem.description}}</mat-card-subtitle>
+        <img mat-card-md-image [src]="checkoutItem.imageUrl" [alt]="checkoutItem.name">
+    </mat-card-title-group>
+    <mat-card-content>
+        Enter name: 
+    </mat-card-content>
+    <mat-card-actions align="end">
+        <button mat-raised-button (click)="remove(checkoutItem.id)">Add to Cart</button>
+    </mat-card-actions>
+</mat-card> -->
+
+<div class="mat-panel">
+    <form class="delivery-form" [formGroup]="customerForm">
+        <div class="row pb-2">
+            <div class="col-md-6">
+                <mat-form-field class="input-width" appearance="fill">
+                    <mat-label>First name</mat-label>
+                    <input matInput formControlName="firstName">
+                    <!-- <mat-hint align="end">Max limit 20 characters</mat-hint> -->
+                    <mat-error *ngIf="hasError('firstName', 'required')">First name is required</mat-error>
+                    <mat-error *ngIf="hasError('firstName', 'maxlength')">Exceeded 20 characters limit</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="col-md-6">
+                <mat-form-field class="input-width" appearance="fill">
+                    <mat-label>Last Name</mat-label>
+                    <input matInput formControlName="lastName">
+                    <mat-error *ngIf="hasError('lastName', 'required')">Last name is required</mat-error>
+                    <mat-error *ngIf="hasError('lastName', 'maxlength')">Exceeded 20 characters limit</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div class="row pb-3">
+            <div class="col-md-6">
+                <mat-form-field class="input-width" appearance="fill">
+                    <mat-label>Contact number</mat-label>
+                    <span matPrefix>+91 &nbsp;</span>
+                    <input type="tel" matInput formControlName="phone">
+                    <mat-error *ngIf="hasError('phone', 'required')">Contact number is required</mat-error>
+                    <mat-error *ngIf="hasError('phone', 'maxlength')">Exceeded 10 characters limit</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="col-md-6">
+                <mat-form-field class="input-width" appearance="fill">
+                    <mat-label>Email</mat-label>
+                    <input type="email" matInput formControlName="email" placeholder="mail@domain.com">
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row pb-2">
+            <div class="col">
+                <mat-form-field class="input-width" appearance="fill">
+                    <mat-label>Address</mat-label>
+                    <textarea matInput formControlName="address"></textarea>
+                    <mat-error *ngIf="hasError('address', 'required')">Address is required</mat-error>
+                    <mat-error *ngIf="hasError('address', 'maxlength')">Exceeded 100 characters limit</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row pb-2">
+            <div class="col-md-6">
+                <mat-form-field class="input-width" appearance="fill">
+                    <mat-label>City</mat-label>
+                    <input matInput formControlName="city">
+                    <mat-error *ngIf="hasError('city', 'required')">City is required</mat-error>
+                    <mat-error *ngIf="hasError('city', 'maxlength')">Exceeded 50 characters limit</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="col-md-6">
+                <mat-form-field class="input-width" appearance="fill">
+                    <mat-label>Pin</mat-label>
+                    <input matInput formControlName="pincode" placeholder="411 014">
+                    <mat-error *ngIf="hasError('pincode', 'required')">Pin is required</mat-error>
+                    <mat-error *ngIf="hasError('pincode', 'maxlength')">Exceeded 7 characters limit</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col">
+                <div class="container">
+                    <div>
+                        <h3> <strong>Amount Payable</strong> </h3>
+                    </div>
+                    <div class="fill"></div>
+                    <div> <strong> {{order.price| currency: 'INR'}}</strong></div>
+                    <!-- {{pizzaForm.value totalPrice | json}} -->
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col text-center mb-2">
+                <button mat-raised-button style="width: 60%;" color="primary" type="submit" (click)="placeOrder()">Place
+                    order</button>
+            </div>
+        </div>
+    </form>
+</div>

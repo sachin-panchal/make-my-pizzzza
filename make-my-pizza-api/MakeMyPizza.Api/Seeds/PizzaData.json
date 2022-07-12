@@ -1,0 +1,35 @@
+[
+    {
+        "Id": 1,
+        "name": "Spicy Mexicano",
+        "subTitle": "₹ 425",
+        "price": 425,
+        "Size" : "Medium",
+        "imageUrl": "../assets/SpicyMexicano.jpeg",
+        "description": "A crazy fusion like never before. A delicious fusion of corn stuffed paratha and cheesy pizza."
+    },
+    {
+        "Id": 2,
+        "name": "Peri Peri Paneer",
+        "subTitle": "₹ 480",
+        "price": 480,
+        "imageUrl": "../assets/PeriPeriPaneer.jpeg",
+        "description": "An epic fusion of paratha and pizza with melting cheese & soft paneer fillings to satisfy all your indulgent cravings."
+    },
+    {
+        "Id": 3,
+        "name": "Paneer Tikka",
+        "subTitle": "₹ 425",
+        "price": 425,
+        "imageUrl": "../assets/paneerTikka.jpeg",
+        "description": "Flavorful trio of juicy paneer with onion"
+    },
+    {
+        "Id": 4,
+        "name": "Italian Garden",
+        "subTitle": "₹ 460",
+        "price": 460,
+        "imageUrl": "../assets/ItalianGarden.jpeg",
+        "description": "Flavorful trio of Mushroom | Black Olive | Spicy Jalapeno | Golden Corn"
+    }
+]

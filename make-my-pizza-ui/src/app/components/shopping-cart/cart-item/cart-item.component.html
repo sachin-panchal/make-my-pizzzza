@@ -1,0 +1,15 @@
+<mat-card class="cart-item">
+    <mat-card-title-group>
+        <mat-card-title>{{pizza.name}}</mat-card-title>
+        <mat-card-subtitle>{{pizza.description}}</mat-card-subtitle>
+        <img mat-card-sm-image [src]="pizza.imageUrl" [alt]="pizza.name">
+    </mat-card-title-group>
+
+    <mat-card-footer>
+        <div class="container">
+            <div>{{pizza.quantity}}</div>
+            <div class="fill"></div>
+            <div>{{pizza.price | currency: 'INR'}}</div>
+        </div>
+    </mat-card-footer>
+</mat-card>

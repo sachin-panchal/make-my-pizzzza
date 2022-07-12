@@ -1,0 +1,28 @@
+
+<div class="row">
+    <div class="col-md-9">
+        <div class="row">
+            <ng-container *ngFor="let pizza of pizzaList">
+                <div class="col-xs-1 col-md-6 col-lg-3">
+                    <mat-panel [options]="pizza" (selectedId)="selectedPizza($event, pizza)" ></mat-panel>
+                    <br>
+                </div>
+            </ng-container>
+            <ng-container *ngFor="let nonPizza of nonPizzaList">
+                <div class="col-xs-1 col-md-6 col-lg-3">
+                    <mat-panel [options]="nonPizza" (selectedId)="selectedNonPizza($event, nonPizza)" ></mat-panel>
+                    <br>
+                </div>
+            </ng-container>
+            <ng-container *ngFor="let drink of drinkList">
+                <div class="col-xs-1 col-md-6 col-lg-3">
+                    <mat-panel [options]="drink" (selectedId)="selectedDrink($event, drink)" ></mat-panel>
+                    <br>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <shopping-cart></shopping-cart>
+    </div>
+</div>

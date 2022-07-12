@@ -1,0 +1,11 @@
+<div>
+    <button class="top-right-corner" mat-icon-button (click)="dismiss()">
+        <mat-icon>close</mat-icon>
+    </button>
+    <ul style="list-style-type: none;">
+        <li *ngFor="let message of snackbarMessage.messages">
+            <mat-icon>{{getmatIcon()}}</mat-icon>
+            <span class="align-with-icon">{{message}}</span>
+        </li>
+    </ul>
+</div>

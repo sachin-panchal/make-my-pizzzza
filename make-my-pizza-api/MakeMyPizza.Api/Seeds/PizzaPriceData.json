@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "pizzaId": 1,
+        "price": 230,
+        "size" : "Small"
+    },
+    {
+        "id": 2,
+        "pizzaId": 1,
+        "price": 425,
+        "size" : "Medium"
+    },
+    {
+        "id": 3,
+        "pizzaId": 1,
+        "price": 635,
+        "size" : "Large"
+    },
+    {
+        "id": 4,
+        "pizzaId": 2,
+        "price": 245,
+        "size" : "Small"
+    },
+    {
+        "id": 5,
+        "pizzaId": 2,
+        "price": 480,
+        "size" : "Medium"
+    },
+    {
+        "id": 6,
+        "pizzaId": 2,
+        "price": 690,
+        "size" : "Large"
+    },
+    {
+        "id": 7,
+        "pizzaId": 3,
+        "price": 245,
+        "size" : "Small"
+    },
+    {
+        "id": 8,
+        "pizzaId": 3,
+        "price": 480,
+        "size" : "Medium"
+    },
+    {
+        "id": 9,
+        "pizzaId": 3,
+        "price": 690,
+        "size" : "Large"
+    },
+    {
+        "id": 10,
+        "pizzaId": 4,
+        "price": 220,
+        "size" : "Small"
+    },
+    {
+        "id": 11,
+        "pizzaId": 4,
+        "price": 450,
+        "size" : "Medium"
+    },
+    {
+        "id": 12,
+        "pizzaId": 4,
+        "price": 670,
+        "size" : "Large"
+    }
+]

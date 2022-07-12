@@ -1,0 +1,9 @@
+{
+    "webApiUrl": "http://localhost:5001/",
+    "environment": {
+        "name" : "prod"
+    },
+    "logging": {
+        "console": true
+    }
+}

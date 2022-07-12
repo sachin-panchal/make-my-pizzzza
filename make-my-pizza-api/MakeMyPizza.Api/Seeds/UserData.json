@@ -1,0 +1,35 @@
+[
+    {
+        "Id": 1,
+        "Username": "aditya.ranjan",
+        "FirstName": "Aditya",
+        "LastName": "Ranjan",
+        "Phone": "08309018300",
+        "Email": "aditya.ranjan@gmail.com",
+        "Address": "83, PrabhaGunj",
+        "City": "Pune",
+        "Pincode": "411014"
+    },
+    {
+        "Id": 2,
+        "Username": "nilam.pandey",
+        "FirstName": "Nilam",
+        "LastName": "Pandey",
+        "Phone": "08305846300",
+        "Email": "nilam.pandey@gmail.com",
+        "Address": "156, Green City",
+        "City": "Pune",
+        "Pincode": "411052"
+    },
+    {
+        "Id": 3,
+        "Username": "vikram.rathod",
+        "FirstName": "Vikram",
+        "LastName": "Rathod",
+        "Phone": "09823018300",
+        "Email": "vikram.rathod@gmail.com",
+        "Address": "55, Florida County",
+        "City": "Pune",
+        "Pincode": "411036"
+    }
+]

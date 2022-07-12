@@ -1,0 +1,78 @@
+<div class="mat-panel">
+    <div class="mat-elevation-z5">
+        <div class="cart-items" *ngIf="shoppingCart?.price; else emptyCart">
+            <ng-container *ngFor="let pizza of shoppingCart.pizzas">
+                <mat-card class="cart-item">
+                    <mat-card-title-group>
+                        <mat-card-title>{{pizza.name}}</mat-card-title>
+                        <mat-card-subtitle>{{pizza.description}}</mat-card-subtitle>
+                        <img mat-card-sm-image [src]="pizza.imageUrl" [alt]="pizza.name">
+                    </mat-card-title-group>
+    
+                    <mat-card-footer>
+                        <div class="container">
+                            <div>{{pizza.quantity}}</div>
+                            <div class="fill"></div>
+                            <div>{{pizza.price | currency: 'INR'}}</div>
+                        </div>
+                    </mat-card-footer>
+                </mat-card>
+                <hr>
+            </ng-container>
+            <ng-container *ngFor="let nonPizza of shoppingCart.nonPizzas">
+                <mat-card class="cart-item">
+                    <mat-card-title-group>
+                        <mat-card-title>{{nonPizza.name}}</mat-card-title>
+                        <mat-card-subtitle>{{nonPizza.description}}</mat-card-subtitle>
+                        <img mat-card-sm-image [src]="nonPizza.imageUrl" [alt]="nonPizza.name">
+                    </mat-card-title-group>
+    
+                    <mat-card-footer>
+                        <div class="container">
+                            <div>{{nonPizza.quantity}}</div>
+                            <div class="fill"></div>
+                            <div>{{nonPizza.price | currency: 'INR'}}</div>
+                        </div>
+                    </mat-card-footer>
+                </mat-card>
+                <hr>
+            </ng-container>
+            <ng-container *ngFor="let drink of shoppingCart.drinks">
+                <mat-card class="cart-item">
+                    <mat-card-title-group>
+                        <mat-card-title>{{drink.name}}</mat-card-title>
+                        <mat-card-subtitle>{{drink.description}}</mat-card-subtitle>
+                        <img mat-card-sm-image [src]="drink.imageUrl" [alt]="drink.name">
+                    </mat-card-title-group>
+    
+                    <mat-card-footer>
+                        <div class="container">
+                            <div>{{drink.quantity}}</div>
+                            <div class="fill"></div>
+                            <div>{{drink.price | currency: 'INR'}}</div>
+                        </div>
+                    </mat-card-footer>
+                </mat-card>
+                <hr>
+            </ng-container>
+        </div>
+        <div class="container" *ngIf="shoppingCart.price">
+            <br>
+            <div>
+                <h3> <strong>Subtotal</strong> </h3>
+            </div>
+            <div class="fill"></div>
+            <div> <strong>{{shoppingCart.price | currency: 'INR'}}</strong></div>
+        </div>
+        <div class="row" *ngIf="shoppingCart.price">
+            <div class="col text-center mb-2">
+                <button mat-raised-button style="width: 60%;" color="primary" (click)="checkout()" >Checkout</button>
+            </div>
+        </div>
+        <ng-template #emptyCart>
+            <div class="cart-items">
+                <h2>Your cart is empty</h2>
+            </div>
+        </ng-template>
+    </div>
+</div>

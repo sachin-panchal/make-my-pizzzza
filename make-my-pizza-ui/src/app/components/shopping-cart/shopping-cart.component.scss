@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.fill {
+    flex: 1;
+}
+
+.mat-panel {
+    max-width: 300px;
+    padding-left: 30px;
+}
+
+.cart-items {
+    overflow-y: scroll !important;
+    height: 500px;
+    padding: 10px;
+}
+
+.cart-item {
+    max-width: 280px;
+}

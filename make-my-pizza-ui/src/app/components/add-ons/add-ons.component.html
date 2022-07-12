@@ -1,0 +1,97 @@
+<div class="mat-panel">
+    <div class="mat-elevation-z5">
+        <div class="cart-items">
+            <div class="row">
+                <ng-container *ngIf="pizzaAddOn" [formGroup]="pizzaForm">
+                    <div class="col-6 mt-2 cart-item-left">
+                        <mat-card class="cart-item">
+                            <mat-card-title-group>
+                                <mat-card-title>{{pizzaAddOn.name}}</mat-card-title>
+                                <mat-card-subtitle>{{pizzaAddOn.description}}</mat-card-subtitle>
+                                <img mat-card-sm-image [src]="pizzaAddOn.imageUrl" [alt]="pizzaAddOn.name">
+                            </mat-card-title-group>
+
+                            <mat-card-footer class="mt-1">
+                                <div class="container">
+                                    <div>{{pizzaAddOn.quantity}}</div>
+                                    <div class="fill"></div>
+                                    <div>{{pizzaCrustPrice | currency: 'INR'}}</div>
+                                </div>
+                            </mat-card-footer>
+                        </mat-card>
+                    </div>
+                    <div class="col-6 mt-2">
+                        <h3>Crust size</h3>
+                        <mat-radio-group class="radio-group" formControlName="size" (change)="crustSizeChanged($event.value)">
+                            <mat-radio-button class="radio-button" *ngFor="let pizzaCrustPrice of pizzaCrustPrices"
+                                [value]="pizzaCrustPrice.size">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <span>{{CrustSize[pizzaCrustPrice.size]}}</span>
+                                    </div>
+                                    <div class="col-md-4"></div>
+                                    <div class="col-md-4">
+                                        <span>{{pizzaCrustPrice.price | currency: 'INR'}}</span>
+                                    </div>
+                                </div>
+                            </mat-radio-button>
+                        </mat-radio-group>
+
+                        <h3>Sauce</h3>
+                        <checkbox-group formControlName="sauces">
+                            <checkbox *ngFor="let sauce of sauces" [value]="sauce.id">
+                                <div class="col-7">
+                                    <span class="text-start" >{{sauce.name}}</span>
+                                </div>
+                                <div class="col-3">
+                                    <span class="text-end">{{sauce.price | currency: 'INR'}}</span>
+                                </div>
+                            </checkbox>
+                        </checkbox-group>
+
+                        <br>
+                        <div class="row">
+                            <div class="col-8">
+                                <mat-slide-toggle labelPosition="before" formControlName="cheese">
+                                    <strong>Add Cheese</strong>
+                                </mat-slide-toggle>
+                            </div>
+                            <div class="col-3">
+                                {{cheesePrice | currency: 'INR'}}
+                            </div>
+                        </div>
+                        
+                        <br>
+                        <br>
+                        <checkbox-group formControlName="toppings">
+                            <h3>Toppings</h3>
+                            <checkbox *ngFor="let topping of toppings" [value]="topping.id" class="checkbox-item">
+                                <div class="col-7 text-left">
+                                    <span class="text-start" >{{topping.name}}</span>
+                                </div>
+                                <div class="col-3">
+                                    <span class="text-end">{{topping.price | currency: 'INR'}}</span>
+                                </div>
+                            </checkbox>
+                        </checkbox-group>
+                        
+                    </div>
+                </ng-container>
+            </div>
+
+            <hr>
+        </div>
+        <div class="container">
+            <div>
+                <h3> <strong>Subtotal</strong> </h3>
+            </div>
+            <div class="fill"></div>
+            <div> <strong> {{totalPrice | currency: 'INR'}}</strong></div>
+        </div>
+        <div class="row">
+            <div class="col text-center mb-2">
+                <button mat-raised-button style="width: 60%;" color="primary" (click)="addToCart()" >Add</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+.cart-item {
+    max-width: 500px;
+}
+
+.cart-item-left {
+    border-right: 1px dashed black;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+    align-items: flex-start;
+}
+
+.radio-button {
+    margin: 5px;
+}
+
+.checkbox-group {
+    margin: 15px 0;
+}
+
+.checkbox-item {
+    padding-bottom: 5px;
+}
+
+.container {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.fill {
+    flex: 1;
+}

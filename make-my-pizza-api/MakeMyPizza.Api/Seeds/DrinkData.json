@@ -1,0 +1,14 @@
+[
+    {
+        "Id": 1,
+        "Name": "Pepsi",
+        "ImageUrl": "../assets/Pepsi.jpeg",
+        "Price": 60
+    },
+    {
+        "Id": 2,
+        "Name": "Coca-Cola",
+        "ImageUrl": "../assets/Coca-Cola.png",
+        "Price": 60
+    }
+]
